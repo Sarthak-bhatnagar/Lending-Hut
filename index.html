@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lending Hut</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+.card {
+  box-shadow: 0 2px 15px 5 rgba(0,0,0,1);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 30px 16px 0 rgba(0,0,0,0.5);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+.one
+{
+  position:relative;
+  padding-right:580px;
+}
+.bg-text:hover
+{
+  background-color: black;
+  color: yellow;
+}
+
+input[type="text"],
+      select {
+        width: 300px;
+        padding: 12px 20px;
+        margin: 10px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* float: right;         */
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      label{
+          display: inline-block;
+      }
+
+      .main-container {
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      .left-column {
+        width: 50%;
+        float: left;
+        /* background-color: #45a049; */
+      }
+      .left-column label{
+          position: absolute;
+          padding-top: 20px;
+          
+      }
+      .left-column select{
+          margin-left: 30%;
+
+      }
+    .right-column {
+        width: 50%;
+        float: right;
+        /* background-color: aqua; */
+      }
+      .right-column label{
+          position: absolute;
+          padding-top: 20px;
+      }
+      .right-column select{
+          margin-left: 38%;
+      }
+      /* .right-column label{
+          position: absolute;
+          padding-top: 20px;
+          
+      }
+      .right-column select{
+          margin-left: 30%;
+
+      } */
+      .bottom-column {
+        width: 100%;
+        text-align: center;
+        /* background-color: cadetblue; */
+		}
+		
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <center><h1 class="one" style="font-family: Arial; font-size: 50px; cursor: pointer;"><b><i style='font-size:24px' class='fas'>&#xf4c0;</i>Lending Hut</b></h1></center>
+
+  <ul class="nav nav-tabs">
+    <li ><a data-toggle="tab" href="#home"><b>Home</b></a></li>
+    <li><a data-toggle="tab" href="#menu1"><b>Insights</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#menu2"><b>Predict</b></a></li>
+    <li><a data-toggle="tab" href="#menu3"><b>News</b></a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade ">
+      <br>
+      <div class="bg-img">
+        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80" style="height: 500px; width: 100%; filter: blur(3px); -webkit-filter: blur(3px); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      </div>
+      <div class="bg-text" style="cursor: pointer;">
+        <h1 style="font-size:60px;"><b>Welcome to Lending Hut!</b></h1>
+      </div>
+    </div>
+
+
+    <div id="menu1" class="tab-pane fade">
+      <h1 style="font-family: Arial;"><b>Insights</b></h>
+      <br>
+      <h2>Get state-wise lending industry information of United States:</h2>
+      <ul style="font-size: 20px;">
+        <li>Loan to Income Ratio vs Grades graph shows the variation of Fully Paid and Defaulted loans based on the two parameters. It was observed that usually the ratio is high for lower grade loans and higher for Defaulted Loans across grades.</li>
+        <li>Know the total amount of loans issued over the years. Both Fully Paid and Defaulted loans peaked near 2015.</li>
+        <li>From the box plot, observe how the interest rates offered for loans vary for different grades. Usually, lower the grade, higher would be the interest rate offered by banks to cover their risk.</li>
+        <li>The graph of average interest rate vs loan amount shows how the defaulted loans always had a higher interest rate across the range of loan amount.</li>
+        <li>Highest purposes of the disbursed loans for a particular US state chosen...</li>
+      </ul>
+<br>
+      <div class='tableauPlaceholder' id='viz1599217223466' style='position: relative'>
+        <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LendingClubviz&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz'  style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+           <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+           <param name='name' value='LendingClubviz&#47;Dashboard1' /><param name='tabs' value='no' />
+           <param name='toolbar' value='yes' />
+           <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LendingClubviz&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' />
+           <param name='display_static_image' value='yes' />
+           <param name='display_spinner' value='yes' />
+           <param name='display_overlay' value='yes' />
+           <param name='display_count' value='yes' /><param name='language' value='en-GB' />
+         </object>
+       </div>                
+        <script type='text/javascript'>                    
+          var divElement = document.getElementById('viz1599217223466');                   
+           var vizElement = divElement.getElementsByTagName('object')[0];                   
+            if ( divElement.offsetWidth > 800 )
+             { 
+              vizElement.style.width='1000px';
+              vizElement.style.height='827px';
+            } 
+            else if ( divElement.offsetWidth > 500 ) 
+          { 
+          vizElement.style.width='1000px';
+        vizElement.style.height='827px';
+      } 
+    else 
+  { 
+  vizElement.style.width='100%';
+vizElement.style.height='1627px';
+}                     
+var scriptElement = document.createElement('script'); 
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+</script>
+    </div>
+
+
+    <div id="menu2" class="tab-pane fade in active">
+      <h1 style="font-family: Arial;"><b>Predict</b></h1>
+      <br>
+      
+      <div class="main-container">
+        <form method="post" action="{{ url_for('predict') }}" onsubmit="return true">
+        <div class="left-column">
+            
+                <label for="ownership">Homeownership</label>
+                <select id="Homeownership" name="Homeownership" required>
+                  <option selected disabled value="">Select...</option>
+                  <option value="Mortgage">Mortgage</option>
+                  <option value="Own">Own</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Other">Other</option>
+                </select>
+                <br>
+                <label for="Purpose">Purpose</label>
+          <select id="purpose" name="purpose" required>
+          <option selected disabled value="">Select...</option>
+          <option value="Wedding">Wedding,House</option>
+          <option value="Medical">Medical,Vacation</option>
+          <option value="Car">Car,Home improvement</option>
+        </select>
+        <br>
+        <label for="Employment">Employment length</label>
+        <select id="Employment" name="Employment" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">0 years</option>
+          <option value="australia">1 years</option>
+          <option value="australia">2-4 years</option>
+          <option value="australia">5-6 years</option>
+          <option value="australia">7-9 years</option>
+          <option value="australia">10 years</option>
+        </select>
+        <br>
+        <label for="country">Interest rate</label>
+        <select id="country" name="country" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">Less than 9.5%</option>
+          <option value="australia">9.5-12%</option>
+          <option value="australia">12-15%</option>
+          <option value="australia">15-20%</option>
+          <option value="australia">More than 20%</option>
+        </select>
+        <br>
+        <label for="country">Delinquency</label>
+        <select id="val1" name="val1" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">0</option>
+          <option value="australia">1-3</option>
+          <option value="australia">>=4</option>
+        </select>
+        <br>
+        <label for="country">Public record</label>
+        <select id="val2" name="val2" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">0-2</option>
+          <option value="australia">3-4</option>
+          <option value="australia">=>5</option>
+        </select>
+        <br>
+        <label for="country">Delinquent Accounts</label>
+        <select id="val3" name="val3" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">No</option>
+          <option value="australia">Yes</option>
+        </select>
+        <br>
+        <label for="country">Annual Income</label>
+        <select id="val4" name="val4" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">Less than 20k</option>
+          <option value="australia">20k-30k</option>
+          <option value="australia">30k-40k</option>
+          <option value="australia">40k-50k</option>
+          <option value="australia">50k-60k</option>
+          <option value="australia">60k-70k</option>
+          <option value="australia">70k-80k</option>
+          <option value="australia">80k-90k</option>
+          <option value="australia">90k-100k</option>
+          <option value="australia">100k-120k</option>
+          <option value="australia">120k-140k</option>
+          <option value="australia">More than 140k</option>
+        </select>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <div class="right-column">
+            <label for="status">Verification status</label>
+        <select id="Verification_status" name="Verification_status" required>
+          <option selected disabled value="">Select...</option>
+          <option value="Source Verified">Source Verified</option>
+		  <option value="Verified">Verified</option>
+          <option value="Not Verified">Not Verified</option>
+        </select>
+        
+        <br>
+        <label for="Term">Term</label>
+        <select id="term" name="term" required>
+          <option selected disabled value="">Select...</option>
+          <option value="months">36 months</option>
+          <option value="months">60 months</option>
+        </select>
+        <br>
+        <label for="last loan">Months since last loan</label>
+        <select id="last_loan" name="last_loan" required>
+          <option selected disabled value="">Select...</option>
+          <option value="a">Less than 38</option>
+          <option value="b">38-39</option>
+          <option value="c">40-41</option>
+          <option value="d">42-48</option>
+          <option value="e">49-52</option>
+          <option value="f">53-64</option>
+          <option value="g">65-84</option>
+          <option value="h">More than 84</option>
+        </select>
+        <br>
+        <label for="country">Months since earliest credit</label>
+        <select id="value12" name="value12" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">Less than 140</option>
+          <option value="australia">141-164</option>
+          <option value="australia">165-247</option>
+          <option value="australia">248-270</option>
+          <option value="australia">271-352</option>
+          <option value="australia">More than 352</option>
+        </select>
+        <br>
+        <label for="country">Current Credit lines</label>
+        <select id="hello" name="hello" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">0</option>
+          <option value="australia">1-3</option>
+          <option value="australia">4-6</option>
+          <option value="australia">7-9</option>
+          <option value="australia">10-12</option>
+          <option value="australia">13-15</option>
+          <option value="australia">16-18</option>
+          <option value="australia">More than 18</option>
+        </select>
+        <br>
+        <label for="country">Total Credit lines</label>
+        <select id="hello1" name="hello1" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">More than 27</option>
+          <option value="australia">28-51</option>
+          <option value="australia">More than 51</option>
+        </select>
+        <br>
+        <label for="country">Total Credit</label>
+        <select id="hello2" name="hello2" required>
+          <option selected disabled value="">Select...</option>
+          <option value="australia">Less than 5000</option>
+          <option value="australia">5k-10k</option>
+          <option value="australia">10k-20k</option>
+          <option value="australia">20k-30k</option>
+          <option value="australia">30k-40k</option>
+          <option value="australia">40k-55k</option>
+          <option value="australia">55k-95k</option>
+          <option value="australia">More than 95k</option>
+        </select>
+        <br>
+        <label for="country">Last Delinquency</label>
+        <select id="hello3" name="hello3" required>
+          <option selected disabled value="">Select...</option>
+		  <option value="australia">No Record</option>
+          <option value="australia">0-3 months</option>
+          <option value="australia">4-30 months</option>
+          <option value="australia">31-56 months</option>
+          <option value="australia">More than 56 months</option>
+        </select>
+    </div>
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <div class="left-column">
+          <label for="country">Debt-to-Income(%)</label>
+          <select id="hello4" name="hello4" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">Less than 1.4</option>
+            <option value="australia">1.4-3.5</option>
+            <option value="australia">3.5-7.7</option>
+            <option value="australia">7.7-10.5</option>
+            <option value="australia">10.5-16.1</option>
+            <option value="australia">16.1-20.3</option>
+            <option value="australia">20.3-21.7</option>
+            <option value="australia">21.7-22.4</option>
+            <option value="australia">22.4-35</option>
+            <option value="australia">More than 35</option>
+          </select>
+</div>
+          <div class="right-column">
+          <label for="country">Last Public record</label>
+          <select id="hello5" name="hello5" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">No record</option>
+            <option value="australia">0-2 months</option>
+            <option value="australia">3-20 months</option>
+            <option value="australia">21-31 months</option>
+            <option value="australia">32-80 months</option>
+            <option value="australia">84-86 months</option>
+            <option value="australia">More than 86 months</option>
+          </select>
+</div>
+          <div class="left-column">
+          <label for="country">Province</label>
+          <select id="hello6" name="hello6" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">ND</option>
+            <option value="australia">NE,IA,NV,FL,HI,AL</option>
+            <option value="australia">NM,VA</option>
+            <option value="australia">OK,TN,MO,LA,MD,NC</option>
+            <option value="australia">UT,KY,AZ,NJ</option>
+            <option value="australia">AR,MI,PA,OH,MN</option>
+            <option value="australia">RI,MA,DE,SD,IN</option>
+            <option value="australia">GA,WA,OR</option>
+            <option value="australia">WI,MT</option>
+            <option value="australia">IL,CT</option>
+            <option value="australia">KS,SC,CO,VT,AK,MS</option>
+            <option value="australia">WV,NH,WY,DC,ME,ID</option>
+          </select>
+        </div>
+		 <div class="right-column">
+          <label for="country">Grade</label>
+          <select id="grade" name="grade" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">A</option>
+            <option value="australia">B</option>
+            <option value="australia">C</option>
+            <option value="australia">D</option>
+            <option value="australia">E</option>
+            <option value="australia">F</option>
+            <option value="australia">G</option>
+          </select>
+</div>
+
+          <div class="left-column">
+          <label for="country">Open Credit line</label>
+          <select id="hello7" name="hello7" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">0</option>
+            <option value="australia">1-3</option>
+            <option value="australia">4-12</option>
+            <option value="australia">13-17</option>
+            <option value="australia">18-22</option>
+            <option value="australia">23-25</option>
+            <option value="australia">26-30</option>
+            <option value="australia">more than 30</option>
+          </select>
+        </div>
+		 <div class="right-column">
+          <label for="country">Last Enquiry</label>
+          <select id="grade1" name="grade1" required>
+            <option selected disabled value="">Select...</option>
+            <option value="australia">0</option>
+            <option value="australia">1-2</option>
+            <option value="australia">3-6</option>
+            <option value="australia">More than 6</option>
+          </select>
+		 </div> 
+          <button type="submit"  > predict </button>
+      </form>
+<br>
+<h3 style="color: white; background-color: black; text-align: center; border-radius: 10px; height: 30px;">{{ prediction_text }}</h3>
+    </div>
+    </div>
+
+
+
+    <div id="menu3" class="tab-pane fade">
+      <h1 style="font-family: Arial;"><b>News</b></h1>
+<br>
+  <div class="card" style="width: 30rem; float: right; margin-left: 10%; cursor: pointer; padding:8px; border-radius: 5%;">
+  <img src="https://specials-images.forbesimg.com/imageserve/5f4c49f1011dee43fa6a2da2/960x0.jpg?fit=scale" alt="paypal" style="width: 292px; height: 200px; border-radius: 5%; padding-right: 2%;">
+  <div class="card-body">
+    <h5 class="card-title" style="font-size: 20px;"><b>PayPal Enters Installment Loan Business Targeting Fintechs Affirm And Afterpay</b></h5>
+    <p class="card-text">Point of sale financing—the modern layaway that lets you pay for a new TV or dress in four installments instead of putting it on your credit...</p>
+    <a href="https://www.forbes.com/sites/jeffkauflin/2020/08/31/paypal-enters-installment-loan-business-targeting-fintechs-affirm-and-afterpay/#394df6914781" class="btn btn-primary">Learn More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 30rem; float: left; cursor: pointer; padding:8px; border-radius: 5%;">
+  <img src="https://www.iotworldtoday.com/files/2020/01/GettyImages-1145882183.jpg" alt="dataanalytics" style="width: 292px; height: 193px; border-radius: 5%; padding-right: 2%;">
+  <div class="card-body">
+    <h5 class="card-title" style="font-size: 20px;"><b>US-based banks face losses as personal loans decline continues</b></h5>
+    <p class="card-text">Data and analytics company GlobalData has observed that US-based banks continue to face severe loses as they experience low net...</p>
+    <a href="https://thepaypers.com/payments-general/us-based-banks-face-losses-as-personal-loans-decline-continues--1244453" class="btn btn-primary">Learn More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 30rem; float: right; cursor: pointer; padding:8px; border-radius: 5%;">
+  <img src="https://image.cnbcfm.com/api/v1/image/106680975-1598545248687-GettyImages-723524843.jpg?v=1598545289&w=1400&h=950" class="card-img-top" alt="gettyimage" style="width: 292px; height: 200px; border-radius: 5%; padding-right: 2%;">
+  <div class="card-body">
+    <h5 class="card-title" style="font-size: 20px;"><b>Is the US the only country with credit scores?</b></h5>
+    <p class="card-text">Many countries do not have a credit score system like the United States. Here’s how other countries measure a person’s creditworthiness...</p>
+   <a href="https://www.cnbc.com/select/is-the-us-the-only-country-with-credit-scores/" class="btn btn-primary">Learn More</a>
+  </div>
+</div>
+<br>
+</div>
+</div>
+
+<script>
+  document.getElementById("form-button").addEventListener("click", function(event){
+  event.preventDefault();
+  console.log("test1");
+});
+</script>
+
+</body>
+</html>
